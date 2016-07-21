@@ -117,9 +117,10 @@ class @FacePP
             callback (response.error_code or -1), response
         return
 
+      xhr.open 'POST', url, true
+
       if 'timeout' of xhr
         xhr.timeout = options.timeout
-      xhr.open 'POST', url, true
 
       if hasBlob
         form = new FormData
